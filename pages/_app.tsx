@@ -1,13 +1,8 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import '../styles/globals.css'
+import type { AppProps } from 'next/app'
 
-type Data = {
-  name: string
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
 }
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
-}
+export default MyApp
